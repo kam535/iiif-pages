@@ -1,5 +1,6 @@
 ---
 title: IIIF Images
-layout: default
+layout: iiif-images
+permalink: /iiif-images.html
 ---
 {{ site.description }}
