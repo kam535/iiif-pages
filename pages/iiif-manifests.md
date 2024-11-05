@@ -1,4 +1,5 @@
 ---
 title: IIIF Manifests
-layout: default
+layout: iiif-manifests
+permalink: /iiif-manifests.html
 ---
