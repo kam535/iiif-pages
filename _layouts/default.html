@@ -1,13 +1,15 @@
-<!doctype html>
-<html lang="en" class="h-100">
-  <head prefix="og: http://ogp.me/ns#">
-    {% include head/head.html %}
-  </head>
-  <body class="d-flex flex-column h-100">
-    <div id="skip-to-content"><a href="#maincontent">Skip to main content</a></div>
-    <main id="maincontent" role="main" class="flex-shrink-0">
-    {{ content }}
-    </main>
-    {% include scroll-to-top.html %}
-  </body>
-</html>
+---
+layout: base
+---
+
+{% assign strings = site.data.strings %}
+
+<article class="page" role="article">
+  <header>
+    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
+    {% include components/message.html text=page.description hide=page.hide_description %}
+  </header>
+
+  {{ content }}
+
+  <hr class="dingbat related"/>
