@@ -49,7 +49,7 @@ url: 'https://kam535.github.io'
 baseurl: '/iiif-pages'
 urlimg: 'https://kam535.github.io/iiif-pages/images/'
 
-logo: "palestineflaglogo.png"
+logo:
 
 gems:
     - jekyll-asciidoc
