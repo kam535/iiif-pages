@@ -80,7 +80,7 @@ plugins:
 # (this is done automatically by gh-pages build)
 #
 # ignore stuff
-exclude: [INSTALL.md, .sass-cache, Gemfile, Gemfile.lockdocs, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
+exclude: [theme.yml, INSTALL.md, .sass-cache, Gemfile, Gemfile.lockdocs, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
 # compress CSS output
 sass:
     sass_dir: _sass
