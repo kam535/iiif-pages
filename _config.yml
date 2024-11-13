@@ -28,7 +28,16 @@ tagline: a template for creating simple digital exhibits and then making them fu
 description: ""
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: glenrobson, CollectionBuilder, kam535
-
+#########
+menu:
+  - title: Home 
+    url:   /
+  - title: Search
+    url:   /pages/search
+  - title: Browse
+    url:   /pages/browse
+  - title: About
+    url:   pages/about
 ##########
 # COLLECTION SETTINGS
 #
