@@ -43,7 +43,7 @@ menu:
 #
 # Set the metadata for your collection (the name of the csv file in your _data directory that describes the objects in your collection) 
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
-metadata: moresampledata - Sheet1
+metadata: medmanfragments.csv
 
 url: 'https://kam535.github.io'
 baseurl: '/iiif-pages'
