@@ -33,11 +33,11 @@ menu:
   - title: Home 
     url:   /
   - title: Search
-    url:   /pages/search
+    url:   /search.html
   - title: Browse
-    url:   /pages/browse
+    url:   /browse.html
   - title: About
-    url:   pages/about
+    url:   /about.html
 ##########
 # COLLECTION SETTINGS
 #
