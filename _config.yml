@@ -33,7 +33,7 @@ menu:
   - title: Home 
     url:   /
   - title: Search
-    url:   /search.html
+    url:   /search/
   - title: Browse
     url:   /browse.html
   - title: About
