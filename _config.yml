@@ -25,9 +25,9 @@ title: CollectionBuilder-GH and IIIF Workbench Mashup
 tagline: a template for creating simple digital exhibits and then making them funky with IIIF
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "wumpus"
+description: ""
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: CollectionBuilder Guys + Like a Lil Bit of Me and also a lot of Glen Robson
+author: glenrobson, CollectionBuilder, kam535
 
 ##########
 # COLLECTION SETTINGS
@@ -36,8 +36,29 @@ author: CollectionBuilder Guys + Like a Lil Bit of Me and also a lot of Glen Rob
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
 metadata: moresampledata - Sheet1
 
+url: 'https://kam535.github.io'
+baseurl: '/iiif-pages'
+urlimg: 'https://kam535.github.io/ubiquitous-fishstick/images/'
+
+logo: "palestineflaglogo.png"
+
+gems:
+    - jekyll-asciidoc
+    - jekyll-gist
+    - jekyll-paginate
+    
 noindex: true 
 
+language: 'en'
+
+markdown: kramdown
+permalink: /:categories/:title/
+highlight: rouge
+excerpt_separator: "<!--more-->"
+include: ['.htaccess']
+# Exclude these files from your production _site
+  
+    
 ##########
 # BUILD SETTINGS 
 #
@@ -46,7 +67,17 @@ noindex: true
 # (this is done automatically by gh-pages build)
 #
 # ignore stuff
-exclude: [docs/, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
+exclude: [INSTALL.md, .sass-cache, Gemfile, Gemfile.lockdocs, Rakefile, README.md, LICENSE, CITATION.cff, CODE_OF_CONDUCT.md, CONTRIBUTING.md]
 # compress CSS output
 sass:
-  style: compressed
+    sass_dir: _sass
+    style: :compressed
+
+
+asciidoctor-enabled: false
+asciidoctor:
+  description: testtewtetrue
+  attributes:
+    source-highlighter: coderay
+    coderay-css: style
+    icons: font
