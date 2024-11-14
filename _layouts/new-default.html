@@ -1,15 +1,30 @@
----
-layout: base
----
+<!DOCTYPE html>
 
-{% assign strings = site.data.strings %}
+{% assign plugins = site.plugins | default:site.gems %}
 
-<article class="page" role="article">
-  <header>
-    <h1 class="page-title">{{ page.title | default:strings.home | default:"Home" }}</h1>
-    {% include components/message.html text=page.description hide=page.hide_description %}
-  </header>
+{% assign image       = page.accent_image | default:site.accent_image | default:'/assets/img/sidebar-bg.jpg' %}
+{% assign color       = page.accent_color | default:site.accent_color | default:'rgb(79,177,186)' %}
+{% assign theme_color = page.theme_color  | default:site.theme_color  | default:'rgb(8,46,57)' %}
 
-  {{ content }}
+<head prefix="og: http://ogp.me/ns#">
+  {% include head/head.html %}
+  {% include head/index.html %}
+  {% assign google_fonts = site.google_fonts %}
+  {% assign font_heading = site.font_heading %}
+  {% assign font         = site.font         %}
 
-  <hr class="dingbat related"/>
+  {% include        head/meta.html %}
+  {% include_cached head/meta-static.html %}
+
+  {% include        head/links.html lang=page.lang %}
+  {% include_cached head/links-static.html %}
+
+  {% include_cached head/scripts.html %}
+
+  {% include_cached head/styles.html layout=page.layout color=color theme_color=theme_color %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    {% include body/index.html %}
+  </body>
+</html>
+
