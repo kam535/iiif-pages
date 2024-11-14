@@ -1,5 +1,6 @@
 ---
 title: collection
-layout: default
-permalink: /collection/
+layout: home-infographic
+permalink: /collection
 ---
+
