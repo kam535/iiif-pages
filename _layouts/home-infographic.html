@@ -10,24 +10,7 @@ layout: compressed
 {% assign color       = page.accent_color | default:site.accent_color | default:'rgb(79,177,186)' %}
 {% assign theme_color = page.theme_color  | default:site.theme_color  | default:'rgb(8,46,57)' %}
 
-<head prefix="og: http://ogp.me/ns#">
-  {% include head/head.html %}
-  {% include head/index.html %}
-  {% assign google_fonts = site.google_fonts %}
-  {% assign font_heading = site.font_heading %}
-  {% assign font         = site.font         %}
-
-  {% include        head/meta.html %}
-  {% include_cached head/meta-static.html %}
-
-  {% include        head/links.html lang=page.lang %}
-  {% include_cached head/links-static.html %}
-
-  {% include_cached head/scripts.html %}
-
-  {% include_cached head/styles.html layout=page.layout color=color theme_color=theme_color %}
-  </head>
-  <body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100">
     {% include body/index.html %}
     {% include collection-nav.html %}
     {%- assign items = site.data[site.metadata] | where_exp: 'item', 'item.objectid != nil' -%}
