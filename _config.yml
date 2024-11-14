@@ -45,6 +45,9 @@ menu:
 # Use the filename of your CSV **without** the ".csv" extension! E.g. _data/demo-metadata.csv --> "demo-metadata"
 metadata: 'medmanfragments'
 
+accent_image: /assets/img/freepalestine.jpg
+accent_color: rgb(79,177,186)
+
 url: 'https://kam535.github.io'
 baseurl: '/iiif-pages'
 urlimg: 'https://kam535.github.io/iiif-pages/images/'
