@@ -38,6 +38,8 @@ menu:
     url:   /search
   - title: Browse
     url:   /browse
+  - title: Data
+    url: /data
   - title: About
     url:   /about
 ##########
