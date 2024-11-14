@@ -1,5 +1,5 @@
 ---
 layout: home-infographic
-title: Collection
+title: Home
 ---
 
