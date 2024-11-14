@@ -27,6 +27,13 @@ layout: base
 
   {% include_cached head/styles.html layout=page.layout color=color theme_color=theme_color %}
   </head>
+  <body class="d-flex flex-column h-100">
+    {% include body/index.html %}
+    {% include collection-nav.html %}
+    {{ content }}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+  </body>
 
 {%- assign items = site.data[site.metadata] | where_exp: 'item', 'item.objectid != nil' -%}
 <div class="row">
@@ -49,14 +56,4 @@ layout: base
 
   </div>
 </div>
-
-<!DOCTYPE html>
-
-  <body class="d-flex flex-column h-100">
-    {% include body/index.html %}
-    {% include collection-nav.html %}
-    {{ content }}
-    {% include foot.html %}
-    {% include scroll-to-top.html %}
-  </body>
 </html>
