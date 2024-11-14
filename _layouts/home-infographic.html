@@ -1,33 +1,28 @@
 ---
-layout: compressed
+layout: page
 ---
+{%- assign items = site.data[site.metadata] | where_exp: 'item', 'item.objectid != nil' -%}
+<div class="row">
+  <div class="col-md-8">
 
-<!DOCTYPE html>
+    {% include index/description.html %}
+    {% include index/carousel.html title="Sample Items" height="300" %}
+  
+  </div>
+  <div class="col-md-4">  
 
-{% assign plugins = site.plugins | default:site.gems %}
+    {% include index/time.html %}
 
-{% assign image       = page.accent_image | default:site.accent_image | default:'/assets/img/sidebar-bg.jpg' %}
-{% assign color       = page.accent_color | default:site.accent_color | default:'rgb(79,177,186)' %}
-{% assign theme_color = page.theme_color  | default:site.theme_color  | default:'rgb(8,46,57)' %}
+    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
 
-<body class="d-flex flex-column h-100">
-    {% include body/index.html %}
-    {% include collection-nav.html %}
-    {%- assign items = site.data[site.metadata] | where_exp: 'item', 'item.objectid != nil' -%}
-    <div class="row">
-    <div class="col-md-8">
-      {% include index/description.html %}
-      {% include index/carousel.html title="Sample Items" height="300" %}
-    </div>
-    <div class="col-md-4">  
-      {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" %}
-      {% include index/objects.html %}
-    </div>
-    <div class="col-md-12">
-      {% include index/data-download.html %}
-    </div>
-    </div>
-      {% include foot.html %}
-      {% include scroll-to-top.html %}
-  </body>
-</html>
+    {% include index/featured-terms.html field="location" title="Locations" btn-color="outline-secondary" %}
+
+    {% include index/objects.html %}
+
+  </div>
+  <div class="col-md-12">
+
+    {% include index/data-download.html %}
+
+  </div>
+</div>
